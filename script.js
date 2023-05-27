@@ -17,7 +17,7 @@ let songs = [
   },
   {
     songName: "Take it over",
-    filePath: "songs/Take over.mp3",
+    filePath: "songs/Take Over.mp3",
     coverPath: "Covers/Take it over.png",
   },
   {
