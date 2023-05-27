@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Varela+Round&display=swap");
+
+body {
+  background-color: #454545;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Oswald", sans-serif;
+  background-color: #333333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+nav ul li {
+  padding: 0 12px;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #555555;
+}
+
+.brand img {
+  width: 0px;
+  padding: 0 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+
+.container {
+  min-height: 75vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 23px auto;
+  width: 90%;
+  border-radius: 12px;
+  padding: 34px;
+  background-image: url("bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.bottom {
+  position: sticky;
+  height: 130px;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons i {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 10px;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+#MyProgressBar {
+  width: 80vw;
+  text-align: center;
+  cursor: pointer;
+  transition: progress 0.3s ease-in-out;
+}
+
+.songitemcontainer {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  font-family: "Oswald", sans-serif;
+  width: 80%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.songItem:hover {
+  transform: scale(1.05);
+}
+
+.songItem img {
+  width: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.songItem:hover img {
+  opacity: 0.8;
+}
+
+.timestamp {
+  margin: 0 23px;
+}
+
+.timestamp i {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timestamp i:hover {
+  transform: scale(1.2);
+}
+
+.songInfo {
+  position: absolute;
+  left: 9vw;
+  margin-top: 25px;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.songInfo:hover img {
+  opacity: 1;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 500px;
+}

@@ -1,0 +1,146 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #333;
+  }
+  
+  /* Navigation styles */
+  nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand img {
+    width: 25px;
+    margin-right: 5px;
+  }
+  
+  .nav-button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    background-color: #555;
+  }
+  
+  /* Container styles */
+  .container {
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    overflow: hidden; /* Ensure the typing effect works properly */
+    white-space: nowrap; /* Prevent line breaks during typing effect */
+    animation: typing 3s steps(40), blink-caret 0.5s step-end infinite;
+  }
+  
+  p {
+    margin-bottom: 10px;
+    color: #666;
+    animation: typing 3s steps(40), blink-caret 0.5s step-end infinite;
+  }
+  
+  /* Bottom section styles */
+  .bottom {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Bubbles animation styles */
+  .bubbles {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    left: var(--bubble-left-offset);
+    bottom: -75%;
+    display: block;
+    width: var(--bubble-radius);
+    height: var(--bubble-radius);
+    border-radius: 50%;
+    animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+  
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(183, 94%, 76%, 0.3);
+      border-radius: inherit;
+      animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+    }
+  
+    /* Randomize bubble properties */
+    --bubble-left-offset: random(0vw, 100vw);
+    --bubble-radius: random(1vw, 10vw);
+    --bubble-float-duration: random(6s, 12s);
+    --bubble-sway-duration: random(4s, 6s);
+    --bubble-float-delay: random(0s, 4s);
+    --bubble-sway-delay: random(0s, 4s);
+    --bubble-sway-type: random("sway-left-to-right", "sway-right-to-left");
+  }
+  
+  /* Keyframe animations */
+  @keyframes float-up {
+    to {
+      transform: translateY(-175vh);
+    }
+  }
+  
+  @keyframes sway-left-to-right {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes sway-right-to-left {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
